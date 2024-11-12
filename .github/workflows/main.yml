@@ -13,3 +13,7 @@ jobs:
         run: pip install pytest
       - name: Probar codigo
         run: pytest test.py
+      - name: Crear una imagen Docker
+        run: docker build -t jonmm021/holamundo .
+      - name: Probar contenedor
+        run: docker run jonmm021/holamundo
